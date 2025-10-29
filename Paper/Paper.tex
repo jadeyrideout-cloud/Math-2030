@@ -5,6 +5,7 @@
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{cite}
 \usepackage{ragged2e}
+\usepackage[title]{appendix}
 
 \title{Your Paper}
 \author{You}
@@ -17,6 +18,12 @@ Your abstract.
 \end{abstract}
 
 \section{Introduction and Questions}
+Our main method to investigate question one was through real gameplay trials with three variations on the standard rules of dominoes. Though before modifying the rules of block dominoes, we first must define them in their basic form.
+
+\subsection{Rules of Block Dominoes}
+There are many variations of games played with European dominoes, though the most common is Block Dominoes (hereby known as Block). This is the game used by international tournaments, and originates from late \(17^{th}\) century Britain \cite{Rules}. The following description is based off that given by Hoyle \cite{Rules}. The game is typically played with four players, each being dealt seven pieces. Play begins with whichever player was the double six, placing it in the centre of the play field. Play continues counter clockwise, each player placing a piece of a matching number of pips next to another, as seen in figure - %figure
+Dominoes must be placed in straight lines as seen above, with doubles being placed vertically. If at any point a player can not make a move, they must skip their turn. Play continues until one player has emptied their hand of dominoes, who is considered the victor. Further rules on scoring do exist, though are omitted for our purposes. \\\\A slight modification was made to these rules for ease of data collection, as we were unable to arrange tests with a group of four. For less than four players five pieces are dealt to each, with the leftover pieces kept as a 'draw pile.' When a player has no valid moves, they draw a domino from this pile. They may immediately play the drawn piece if an opening is available, otherwise their turn is skipped.
+
 \section{methods}
 Our main method to investigate question one was through real gameplay trials with three variations on the standard rules of dominoes. Though before modifying the rules of block dominoes, we first must define them in their basic form. %check book
 \subsection{Data collection}
@@ -43,8 +50,11 @@ The only new illegal move is to place a double at one of these intersections.
 \section*{Acknowledgements}
 We would like to acknowledge several people if not for whom this research would not have been possible. Our biggest thank you goes to K. Healey, along with T. Anne and N. Regier of the MUN Folklore Society for participation in data collection. The domino set used for data collection was a childhood set graciously donated by L. Adey-Rideout, which we appreciate greatly. A thank you also goes to L. Sacrey, for being our first introduction to the wonders of \LaTeX.
 
-\bibliographystyle{science}
-\bibliography{sample}
-%https://ia801405.us.archive.org/8/items/B-001-002-771/B-001-002-771.pdf (page 202 block rules)
+\section*{Appendix}
+\appendix
+\section{Data}\label{A}
+
+\bibliographystyle{acm}
+\bibliography{sources}
 
 \end{document}
