@@ -18,28 +18,38 @@ Your abstract.
 \end{abstract}
 
 \section{Introduction and Questions}
-Our main method to investigate question one was through real gameplay trials with three variations on the standard rules of dominoes. Though before modifying the rules of block dominoes, we first must define them in their basic form.
+\subsection{Current Literature}
+Current literature on European dominoes is rather scattered, being in many different fields. The bulk of studies use the form factor of a domino for other purposes, such as an educational tool. Assigning facts, questions, for simple problems to each end of a piece has been found to be a useful learning aid for younger students \cite{education}. Mathematical literature usually takes one of two forms. The most common is to define a game with similar rules but different pieces \cite{squares}. As seen below, many use squares with multicoloured edges for ease of tiling the plane. %figure
+These dominoes are most often used in discussion of tiling or machine learning \cite{turing}. The other common form of mathematical research is the strategy of one specific regional variant of the game \cite{regional}. Most of these games use European dominoes, though the regionally of the rule set limit both reach and application. Our research aims to open an alley for a more standardised discussion on both of these topics.
+
+\subsection{Research Questions}
+
+
+\section{methods}
+Our main method to investigate question one was through real gameplay trials with three variations on the standard rules of dominoes. Though before modifying the rules of block dominoes, we first must define them in their basic form. %check book
 
 \subsection{Rules of Block Dominoes}
 There are many variations of games played with European dominoes, though the most common is Block Dominoes (hereby known as Block). This is the game used by international tournaments, and originates from late \(17^{th}\) century Britain \cite{Rules}. The following description is based off that given by Hoyle \cite{Rules}. The game is typically played with four players, each being dealt seven pieces. Play begins with whichever player was the double six, placing it in the centre of the play field. Play continues counter clockwise, each player placing a piece of a matching number of pips next to another, as seen in figure - %figure
 Dominoes must be placed in straight lines as seen above, with doubles being placed vertically. If at any point a player can not make a move, they must skip their turn. Play continues until one player has emptied their hand of dominoes, who is considered the victor. Further rules on scoring do exist, though are omitted for our purposes. \\\\A slight modification was made to these rules for ease of data collection, as we were unable to arrange tests with a group of four. For less than four players five pieces are dealt to each, with the leftover pieces kept as a 'draw pile.' When a player has no valid moves, they draw a domino from this pile. They may immediately play the drawn piece if an opening is available, otherwise their turn is skipped.
 
-\section{methods}
-Our main method to investigate question one was through real gameplay trials with three variations on the standard rules of dominoes. Though before modifying the rules of block dominoes, we first must define them in their basic form. %check book
 \subsection{Data collection}
 Collection of data was conducted in two sessions, with a group of three and two respectively. Many rounds of each rule set were played, taking photographs of the final board state at the end of each round. These were then analysed by hand to create the tables shown in A. The data recorded includes the winner of each round, total dominoes placed, number of intersections of three and four dominoes, number of doubles placed, and the number of 'turns'. These categories are mostly self explanatory, though for our purposes 'turns' has a special definition. A 'turn' is any placement of a domino that deviates from the rules of Block, as defined in each rule set.
+
 \subsection{Complexity}
 To compare the complexity of each rule set, we defined a complexity value per domino for a round, \(C\), as the following:
 \begin{equation}\label{Eqn1}
     C=\frac{10TI}{BN}
 \end{equation}
 Where \(T\) is the number of turns, \(I\) is the total number of three and four way intersections, \(B\) is the number of doubles placed, and \(N\) is the total pieces placed. As \(T\) and \(I\) raise complexity, they are directly proportional to \(C\). \(C\propto\frac{1}{B}\) as the number of doubles will always artificially increase the complexity of any possible rule set, and as play starts with the double six, \(B\neq0\). The factor of ten was added to the equation for ease of comparing values. As both \(T\) and \(I\) will equal zero for a round of Block, it's complexity will always be zero. This is our baseline for comparing complexities. 
+
 \subsection{Rule Set I}
 This first variation is the most similar to Block, adding one additional move. A piece can now be played on the end of a double, as shown in the figure below. %figure
 From there, play continues in a straight line, though additional branches can be made off of further doubles.
+
 \subsection{Rule Set II}
 Rule set two all the rules of set I, adding the ability to play pieces at a ninety degree angle from the previous as seen in figure - %figure
 Due to this, two new illegal moves must be defined. The first is the 'parallel placement' of pieces shown below, as to make this rule set less convoluted. The second is that the minimum space between to dominoes to not be touching is \(\frac{1}{2}w\). As the dominoes are not confined to a perfect grid, some small amount of shifting can occur at each intersection. This can compound, resulting in two dominoes that should be touching not physically doing so. Due to the way doubles shift alignment of the next piece by \(\frac{1}{2}w\), the minimum space between non adjacent dominoes will be this offset.
+
 \subsection{Rule Set III}
 Set III inherits all the rules of set II, adding an extra rule for intersections. Any intersection can now be treated as a double, placing a domino of equal value on an open side of the intersection as in figure - %figure
 The only new illegal move is to place a double at one of these intersections.
