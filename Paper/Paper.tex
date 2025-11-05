@@ -18,6 +18,21 @@ Your abstract.
 \end{abstract}
 
 \section{Introduction and Questions}
+\subsection{Definition of Pieces}
+The standard European originates from Italy, and was originally made from ivory and sometimes ebony \cite{Rules}. Modern dominoes are usually made of porcelain, as are the set used in our research. European dominoes are rectangular, with dimensions of \(1\times2\). Each end of the domino holds a numerical value on each end in the number of pips, divided by a centre line as seen in the figure below.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.1\linewidth]{photos/Double 6.png}
+    \caption{A double six domino.}
+    \label{domino}
+\end{figure}
+Dominoes with two of the same number are called doubles, and are of utmost importance to our research. European dominoes come in sets of 'double 6', 'double 9' and 'double 12', the number indicating the highest value piece in the set, such as the double six seen in figure \ref{domino}. The number of pieces in a set is given by:
+\begin{equation}
+    \frac{N(N-1)}{2}+N
+    \label{Eqn2}
+\end{equation}
+Where \(N\) is the double number. This formula is derived from \(\binom{N+1}{2}\), as there is one piece for every combination of two numbers between zero and the double number. An additional \(N\) is added to equation \ref{Eqn2} to account for the double pieces.
+
 \subsection{Current Literature}
 Current literature on European dominoes is rather scattered, being in many different fields. The bulk of studies use the form factor of a domino for other purposes, such as an educational tool. Assigning facts, questions, for simple problems to each end of a piece has been found to be a useful learning aid for younger students \cite{education}. Mathematical literature usually takes one of two forms. The most common is to define a game with similar rules but different pieces \cite{squares}. As seen below, many use squares with multicoloured edges for ease of tiling the plane. %figure
 These dominoes are most often used in discussion of tiling or machine learning \cite{turing}. The other common form of mathematical research is the strategy of one specific regional variant of the game \cite{regional}. Most of these games use European dominoes, though the regionally of the rule set limit both reach and application. Our research aims to open an alley for a more standardised discussion on both of these topics.
