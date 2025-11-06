@@ -28,7 +28,7 @@ The standard European originates from Italy, and was originally made from ivory 
 \end{figure}
 Dominoes with two of the same number are called doubles, and are of utmost importance to our research. European dominoes come in sets of 'double 6', 'double 9' and 'double 12', the number indicating the highest value piece in the set, such as the double six seen in figure \ref{domino}. The number of pieces in a set is given by:
 \begin{equation}
-    \frac{N(N-1)}{2}+N
+    \frac{N(N+1)}{2}+N
     \label{Eqn2}
 \end{equation}
 Where \(N\) is the double number. This formula is derived from \(\binom{N+1}{2}\), as there is one piece for every combination of two numbers between zero and the double number. An additional \(N\) is added to equation \ref{Eqn2} to account for the double pieces.
@@ -38,7 +38,13 @@ Current literature on European dominoes is rather scattered, being in many diffe
 These dominoes are most often used in discussion of tiling or machine learning \cite{turing}. The other common form of mathematical research is the strategy of one specific regional variant of the game \cite{regional}. Most of these games use European dominoes, though the regionally of the rule set limit both reach and application. Our research aims to open an alley for a more standardised discussion on both of these topics.
 
 \subsection{Research Questions}
-
+To begin to fill this large gap in literature, we must first define the game of dominoes. The most popular form is Block dominoes, as outlined in section 2.1. This game is not of mathematical interest outside of probability, as all dominoes are placed in straight lines (see figure \ref{Block}). To broaden the area of study into fields such as tiling, our research questions arise.
+\begin{enumerate}
+    \centering
+    \item What rule changes must be made to the game of Block dominoes to make it of mathematical interest?
+    \item How and when do these rule changes begin to impact the playability of the game? 
+\end{enumerate}
+The first of these questions is fairly self explanatory, as rules can be added and changed to create different patterns. Question two on the other hand is qualitative in nature, and we believe to be just as important. In our eyes, further research into a traditional game that is not enjoyable to participate in is a waste of both time and energy, and thus we will attempt to find a rule set that strikes a balance between these two factors.
 
 \section{methods}
 Our main method to investigate question one was through real gameplay trials with three variations on the standard rules of dominoes. Though before modifying the rules of block dominoes, we first must define them in their basic form. %check book
@@ -98,10 +104,44 @@ Set III inherits all the rules of set II, adding an extra rule for intersections
 The only new illegal move is to place a double at one of these intersections.
 
 \section{Results and Analysis}
+Our qualitative results will be broken up by rule set, as each had unique findings. All raw data collected can be found in appendix \ref{A}, with graphs of select data found throughout this section.
+
+\subsection{Rule Set I}
+Our first rule set was found to be the most strategic. This is due to the limited amount of opportunities to place dominoes on any player's turn, raising the probability of a player having to skip said turn. After a few rounds had been played participants also started keeping track of each other's hands, known as 'counting cards', and playing to force other players to skip a turn. The data from several select rounds can be seen in the graph below:
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\linewidth]{graphs/Rules I chart.png}
+    \caption{Select data from rule set I}
+    \label{graphA}
+\end{figure}
+Most metrics for rule set I stayed consistent between rounds, having the middle round length of the three.
+
+\subsection{Rule Set II}
+Rule set II was found by participants to be the most fun of the three. The ability to place pieces at ninety degree angles made for more interesting patterns as seen in figure \ref{gameB}. The method of blocking moves by counting cards became more involved, as moves could be physically blocked such as the double zero in the aforementioned figure. As expected the number of turns increased for this rule set, as seen below:
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\linewidth]{graphs/Rules II chart.png}
+    \caption{Select data from rule set II}
+    \label{graphB}
+\end{figure}
+Round length for this rule set is more random than the first, with the number of turns increasing dramatically due to the possibility of one at every intersection.
+
+\subsection{Rule Set III}
+
+\subsection{Complexity}
+Average and bounds of \(C\) values are given in the following chart:
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\linewidth]{graphs/C chart.png}
+    \caption{A bar chart of \(C\) values for each rule set.}
+    \label{graphcom}
+\end{figure}
+As seen, average \(C\) values increase with each rule set. This increase appears to be linear, though no concrete conclusion can be drawn from such a limited data set. The maximum bound of \(C\) increase drastically between each rule set as is expected with the raising rule set, though the minimum bounds show an interesting finding. The lowest bound for both rule set I and II is zero, meaning at least one round was identical in play to a round of Block. This is due to the limited number of move options in any given game state in these two rule sets, giving a random chance of no player being able to branch out from the form of Block. This chance is greatly lowered in rule set III, as seen by the increased minimum bound.
+
 \section{Conclusion}
 
 \section*{Acknowledgements}
-We would like to acknowledge several people if not for whom this research would not have been possible. Our biggest thank you goes to K. Healey, along with T. Anne and N. Regier of the MUN Folklore Society for participation in data collection. The domino set used for data collection was a childhood set graciously donated by L. Adey-Rideout, which we appreciate greatly. A thank you also goes to L. Sacrey, for being our first introduction to the wonders of \LaTeX.
+We would like to acknowledge several people if not for whom this research would not have been possible. Our biggest thank you goes to Kaitlin Healey, along with Tiffany Anne and Nicole Regier of the MUN Folklore Society for participation in data collection. The domino set used for data collection was a childhood set graciously donated by Lisa Adey-Rideout, which we appreciate greatly. A thank you also goes to Logan Sacrey, for being our first introduction to the wonders of \LaTeX.
 
 \section*{Appendix}
 \appendix
