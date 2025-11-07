@@ -8,7 +8,7 @@
 \usepackage[title]{appendix}
 
 \title{Your Paper}
-\author{You}
+\author{Jay Adey-Rideout\\\\\textit{Math 2030}}
 
 \begin{document}
 \maketitle
@@ -44,7 +44,7 @@ To begin to fill this large gap in literature, we must first define the game of 
     \item What rule changes must be made to the game of Block dominoes to make it of mathematical interest?
     \item How and when do these rule changes begin to impact the playability of the game? 
 \end{enumerate}
-The first of these questions is fairly self explanatory, as rules can be added and changed to create different patterns. Question two on the other hand is qualitative in nature, and we believe to be just as important. In our eyes, further research into a traditional game that is not enjoyable to participate in is a waste of both time and energy, and thus we will attempt to find a rule set that strikes a balance between these two factors.
+The first of these questions is fairly self explanatory, as rules can be added and changed to create different patterns. Question two on the other hand is qualitative in nature, and we believe to be just as important. In our eyes, further research into a traditional game that is not enjoyable to participate in is a waste of both time and energy, and thus we will attempt to find a rule set that strikes a balance between these two factors.  Both these questions are answered in section 3.5.
 
 \section{methods}
 Our main method to investigate question one was through real gameplay trials with three variations on the standard rules of dominoes. Though before modifying the rules of block dominoes, we first must define them in their basic form. %check book
@@ -127,6 +127,14 @@ Rule set II was found by participants to be the most fun of the three. The abili
 Round length for this rule set is more random than the first, with the number of turns increasing dramatically due to the possibility of one at every intersection.
 
 \subsection{Rule Set III}
+This final rule set was where the playability of the game began to fall apart. With the additional doubles created at intersections there was rarely a situation where a player had no possible moves. As seen in the winner column for session one in \ref{A3}, this lead to the player who started any given round winning it. The number of players then offsets this patten, as seen in the data for session two. Our participants found that this took most of the enjoyment out of this rule set, as the outcome was predictable. Some data from \ref{A3} is shown below:
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\linewidth]{graphs/Rules III chart.png}
+    \caption{Select data from rule set III}
+    \label{graphC}
+\end{figure}
+As rule set III adds more openings to place dominoes, the extra intersections and turns are expected. What is not as intuitive at first glance is the consistent number of pieces placed, though due to the predictability explained above, this makes sense. Overall, this rule set was found by participants to be unenjoyable, with little strategy and predictable win conditions.
 
 \subsection{Complexity}
 Average and bounds of \(C\) values are given in the following chart:
@@ -138,10 +146,20 @@ Average and bounds of \(C\) values are given in the following chart:
 \end{figure}
 As seen, average \(C\) values increase with each rule set. This increase appears to be linear, though no concrete conclusion can be drawn from such a limited data set. The maximum bound of \(C\) increase drastically between each rule set as is expected with the raising rule set, though the minimum bounds show an interesting finding. The lowest bound for both rule set I and II is zero, meaning at least one round was identical in play to a round of Block. This is due to the limited number of move options in any given game state in these two rule sets, giving a random chance of no player being able to branch out from the form of Block. This chance is greatly lowered in rule set III, as seen by the increased minimum bound.
 
+\subsection{Overall Analysis}
+Through a culmination of all the above finding, our main questions can be answered. The simplest answer to question one is that rule set III gives the most complexity, though this changes when taking into account question two. Participants found rule set III to be the least enjoyable, showing that the rule changes there in answer question two. This leaves rule set II, which strikes the best balance between playability and complexity, answering question one. An example of the complexity is shown in figure \ref{square} below, one of the more interesting patterns to come out of rule set II.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{photos/B2 final.jpg}
+    \caption{An odd pattern from rule set II}
+    \label{square}
+\end{figure}
+
 \section{Conclusion}
+European dominoes, and the games played with them, have withstood the test of time for an extraordinary period for such a simple idea. Though due to this simplicity mathematical research is few and far between, and we set out to change that. With the creation of three variations on tournament rules, we collected data on real games to find an equilibrium of mathematical complexity and strategy. Complexity was compared via equation \ref{eqn2}, with strategy coming from the testimonials of participants. We found that rule set II struck the best balance of these two characteristics, with it being the favourite amongst participants. We hope that these finding can open doors to expand research into dominoes to the fields of tessellation, statistics, and game theory just to name a few.
 
 \section*{Acknowledgements}
-We would like to acknowledge several people if not for whom this research would not have been possible. Our biggest thank you goes to Kaitlin Healey, along with Tiffany Anne and Nicole Regier of the MUN Folklore Society for participation in data collection. The domino set used for data collection was a childhood set graciously donated by Lisa Adey-Rideout, which we appreciate greatly. A thank you also goes to Logan Sacrey, for being our first introduction to the wonders of \LaTeX.
+We would like to acknowledge several people if not for whom this research would not have been possible. Our biggest thank you goes to Kaitlin Healey, along with Tiffany Anne and Nicole Regier of the MUN Folklore Society for participation in data collection. Until undertaking this research we were not aware gathering data could be entertaining. The domino set used for data collection was a childhood set graciously donated by Lisa Adey-Rideout, which we appreciate greatly. A thank you also goes to Logan Sacrey, for being our first introduction to the wonders of \LaTeX.
 
 \section*{Appendix}
 \appendix
