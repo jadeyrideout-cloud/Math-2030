@@ -12,13 +12,12 @@
 
 \begin{document}
 \maketitle
-
+\newpage
 \begin{abstract}
-Your abstract.
+European dominoes and their surrounding games have been left out of many mathematical discussions. This is due to the lack of complexity in the standard tournament rules, though those rules can be changed. We set out to find a new rule set based of the standard that adds complexity to the patterns formed by the final board state of the game, by devising a complexity metric. Three different rule sets were created, and data was gathered through gameplay trials with real participants. The strategy and enjoyability of each rule set was also taken into account, as to allow further research into game theory and statistics.
 \end{abstract}
-
-\section{Introduction and Questions}
-\subsection{Definition of Pieces}
+\newpage
+\section{Introduction}
 The standard European originates from Italy, and was originally made from ivory and sometimes ebony \cite{Rules}. Modern dominoes are usually made of porcelain, as are the set used in our research. European dominoes are rectangular, with dimensions of \(1\times2\). Each end of the domino holds a numerical value on each end in the number of pips, divided by a centre line as seen in the figure below.
 \begin{figure}[h!]
     \centering
@@ -32,10 +31,16 @@ Dominoes with two of the same number are called doubles, and are of utmost impor
     \label{Eqn2}
 \end{equation}
 Where \(N\) is the double number. This formula is derived from \(\binom{N+1}{2}\), as there is one piece for every combination of two numbers between zero and the double number. An additional \(N\) is added to equation \ref{Eqn2} to account for the double pieces.
-
+\pagebreak
 \subsection{Current Literature}
-Current literature on European dominoes is rather scattered, being in many different fields. The bulk of studies use the form factor of a domino for other purposes, such as an educational tool. Assigning facts, questions, for simple problems to each end of a piece has been found to be a useful learning aid for younger students \cite{education}. Mathematical literature usually takes one of two forms. The most common is to define a game with similar rules but different pieces \cite{squares}. As seen below, many use squares with multicoloured edges for ease of tiling the plane. %figure
-These dominoes are most often used in discussion of tiling or machine learning \cite{turing}. The other common form of mathematical research is the strategy of one specific regional variant of the game \cite{regional}. Most of these games use European dominoes, though the regionally of the rule set limit both reach and application. Our research aims to open an alley for a more standardised discussion on both of these topics.
+Current literature on European dominoes is rather scattered, being in many different fields. The bulk of studies use the form factor of a domino for other purposes, such as an educational tool. Assigning facts, questions, for simple problems to each end of a piece has been found to be a useful learning aid for younger students \cite{education}. Mathematical literature usually takes one of two forms. The most common is to define a game with similar rules but different pieces \cite{squares}. As seen below, many use squares with multicoloured edges for ease of tiling the plane.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.2\linewidth]{photos/Square.png}
+    \caption{A domino similar to that described by Chlebus \cite{squares}.}
+    \label{Square}
+\end{figure}
+\\These dominoes are most often used in discussion of tiling or machine learning \cite{turing}. The other common form of mathematical research is the strategy of one specific regional variant of the game \cite{regional}. Most of these games use European dominoes, though the regionally of the rule set limit both reach and application. Our research aims to open an alley for a more standardised discussion on both of these topics.
 
 \subsection{Research Questions}
 To begin to fill this large gap in literature, we must first define the game of dominoes. The most popular form is Block dominoes, as outlined in section 2.1. This game is not of mathematical interest outside of probability, as all dominoes are placed in straight lines (see figure \ref{Block}). To broaden the area of study into fields such as tiling, our research questions arise.
@@ -45,7 +50,7 @@ To begin to fill this large gap in literature, we must first define the game of 
     \item How and when do these rule changes begin to impact the playability of the game? 
 \end{enumerate}
 The first of these questions is fairly self explanatory, as rules can be added and changed to create different patterns. Question two on the other hand is qualitative in nature, and we believe to be just as important. In our eyes, further research into a traditional game that is not enjoyable to participate in is a waste of both time and energy, and thus we will attempt to find a rule set that strikes a balance between these two factors.  Both these questions are answered in section 3.5.
-
+\pagebreak
 \section{methods}
 Our main method to investigate question one was through real gameplay trials with three variations on the standard rules of dominoes. Though before modifying the rules of block dominoes, we first must define them in their basic form. %check book
 
@@ -57,9 +62,8 @@ There are many variations of games played with European dominoes, though the mos
     \caption{The end state of a game of Block}
     \label{Block}
 \end{figure}
-
-Dominoes must be placed in straight lines as seen above, with doubles being placed vertically. If at any point a player can not make a move, they must skip their turn. Play continues until one player has emptied their hand of dominoes, who is considered the victor. Further rules on scoring do exist, though are omitted for our purposes. \\\\A slight modification was made to these rules for ease of data collection, as we were unable to arrange tests with a group of four. For less than four players five pieces are dealt to each, with the leftover pieces kept as a 'draw pile.' When a player has no valid moves, they draw a domino from this pile. They may immediately play the drawn piece if an opening is available, otherwise their turn is skipped.
-
+\\Dominoes must be placed in straight lines as seen above, with doubles being placed vertically. If at any point a player can not make a move, they must skip their turn. Play continues until one player has emptied their hand of dominoes, who is considered the victor. Further rules on scoring do exist, though are omitted for our purposes. \\\\A slight modification was made to these rules for ease of data collection, as we were unable to arrange tests with a group of four. For less than four players five pieces are dealt to each, with the leftover pieces kept as a 'draw pile.' When a player has no valid moves, they draw a domino from this pile. They may immediately play the drawn piece if an opening is available, otherwise their turn is skipped.
+\pagebreak
 \subsection{Data collection}
 Collection of data was conducted in two sessions, with a group of three and two respectively. Many rounds of each rule set were played, taking photographs of the final board state at the end of each round. These were then analysed by hand to create the tables shown in A. The data recorded includes the winner of each round, total dominoes placed, number of intersections of three and four dominoes, number of doubles placed, and the number of 'turns'. These categories are mostly self explanatory, though for our purposes 'turns' has a special definition. A 'turn' is any placement of a domino that deviates from the rules of Block, as defined in each rule set.
 
@@ -72,37 +76,34 @@ Where \(T\) is the number of turns, \(I\) is the total number of three and four 
 
 \subsection{Rule Set I}
 This first variation is the most similar to Block, adding one additional move. A piece can now be played on the end of a double, as shown in the figure below. 
-\begin{figure}[!h]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=0.5\linewidth]{photos/A8(1) final.png}
+    \includegraphics[width=0.4\linewidth]{photos/A8(1) final.png}
     \caption{The end state of a game of rule set I}
     \label{gameA}
 \end{figure}
-
-From there, play continues in a straight line, though additional branches can be made off of further doubles.
+\\From there, play continues in a straight line, though additional branches can be made off of further doubles.
 
 \subsection{Rule Set II}
 Rule set two all the rules of set I, adding the ability to play pieces at a ninety degree angle from the previous as seen in figure \ref{gameB}
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.5\linewidth]{photos/B7 final.png}
+    \includegraphics[width=0.4\linewidth]{photos/B7 final.png}
     \caption{The end state of a game of rule set II}
     \label{gameB}
 \end{figure}
-
-Due to this, two new illegal moves must be defined. The first is the 'parallel placement' of pieces shown below, as to make this rule set less convoluted. The second is that the minimum space between to dominoes to not be touching is \(\frac{1}{2}w\). As the dominoes are not confined to a perfect grid, some small amount of shifting can occur at each intersection. This can compound, resulting in two dominoes that should be touching not physically doing so. Due to the way doubles shift alignment of the next piece by \(\frac{1}{2}w\), the minimum space between non adjacent dominoes will be this offset.
-
+\\Due to this, two new illegal moves must be defined. The first is the 'parallel placement' of pieces shown below, as to make this rule set less convoluted. The second is that the minimum space between to dominoes to not be touching is \(\frac{1}{2}w\). As the dominoes are not confined to a perfect grid, some small amount of shifting can occur at each intersection. This can compound, resulting in two dominoes that should be touching not physically doing so. Due to the way doubles shift alignment of the next piece by \(\frac{1}{2}w\), the minimum space between non adjacent dominoes will be this offset.
+\pagebreak
 \subsection{Rule Set III}
 Set III inherits all the rules of set II, adding an extra rule for intersections. Any intersection can now be treated as a double, placing a domino of equal value on an open side of the intersection as in figure \ref{gameC}
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.5\linewidth]{photos/C5 final.png}
+    \includegraphics[width=0.4\linewidth]{photos/C5 final.png}
     \caption{The end state of a game of rule set III}
     \label{gameC}
 \end{figure}
-
-The only new illegal move is to place a double at one of these intersections.
-
+\\The only new illegal move is to place a double at one of these intersections.
+\pagebreak
 \section{Results and Analysis}
 Our qualitative results will be broken up by rule set, as each had unique findings. All raw data collected can be found in appendix \ref{A}, with graphs of select data found throughout this section.
 
@@ -114,8 +115,8 @@ Our first rule set was found to be the most strategic. This is due to the limite
     \caption{Select data from rule set I}
     \label{graphA}
 \end{figure}
-Most metrics for rule set I stayed consistent between rounds, having the middle round length of the three.
-
+\\Most metrics for rule set I stayed consistent between rounds, having the middle round length of the three.
+\pagebreak
 \subsection{Rule Set II}
 Rule set II was found by participants to be the most fun of the three. The ability to place pieces at ninety degree angles made for more interesting patterns as seen in figure \ref{gameB}. The method of blocking moves by counting cards became more involved, as moves could be physically blocked such as the double zero in the aforementioned figure. As expected the number of turns increased for this rule set, as seen below:
 \begin{figure}[h!]
@@ -124,8 +125,8 @@ Rule set II was found by participants to be the most fun of the three. The abili
     \caption{Select data from rule set II}
     \label{graphB}
 \end{figure}
-Round length for this rule set is more random than the first, with the number of turns increasing dramatically due to the possibility of one at every intersection.
-
+\\Round length for this rule set is more random than the first, with the number of turns increasing dramatically due to the possibility of one at every intersection.
+\pagebreak
 \subsection{Rule Set III}
 This final rule set was where the playability of the game began to fall apart. With the additional doubles created at intersections there was rarely a situation where a player had no possible moves. As seen in the winner column for session one in \ref{A3}, this lead to the player who started any given round winning it. The number of players then offsets this patten, as seen in the data for session two. Our participants found that this took most of the enjoyment out of this rule set, as the outcome was predictable. Some data from \ref{A3} is shown below:
 \begin{figure}[h!]
@@ -134,8 +135,8 @@ This final rule set was where the playability of the game began to fall apart. W
     \caption{Select data from rule set III}
     \label{graphC}
 \end{figure}
-As rule set III adds more openings to place dominoes, the extra intersections and turns are expected. What is not as intuitive at first glance is the consistent number of pieces placed, though due to the predictability explained above, this makes sense. Overall, this rule set was found by participants to be unenjoyable, with little strategy and predictable win conditions.
-
+\\As rule set III adds more openings to place dominoes, the extra intersections and turns are expected. What is not as intuitive at first glance is the consistent number of pieces placed, though due to the predictability explained above, this makes sense. Overall, this rule set was found by participants to be unenjoyable, with little strategy and predictable win conditions.
+\pagebreak
 \subsection{Complexity}
 Average and bounds of \(C\) values are given in the following chart:
 \begin{figure}[h!]
@@ -144,7 +145,7 @@ Average and bounds of \(C\) values are given in the following chart:
     \caption{A bar chart of \(C\) values for each rule set.}
     \label{graphcom}
 \end{figure}
-As seen, average \(C\) values increase with each rule set. This increase appears to be linear, though no concrete conclusion can be drawn from such a limited data set. The maximum bound of \(C\) increase drastically between each rule set as is expected with the raising rule set, though the minimum bounds show an interesting finding. The lowest bound for both rule set I and II is zero, meaning at least one round was identical in play to a round of Block. This is due to the limited number of move options in any given game state in these two rule sets, giving a random chance of no player being able to branch out from the form of Block. This chance is greatly lowered in rule set III, as seen by the increased minimum bound.
+\\As seen, average \(C\) values increase with each rule set. This increase appears to be linear, though no concrete conclusion can be drawn from such a limited data set. The maximum bound of \(C\) increase drastically between each rule set as is expected with the raising rule set, though the minimum bounds show an interesting finding. The lowest bound for both rule set I and II is zero, meaning at least one round was identical in play to a round of Block. This is due to the limited number of move options in any given game state in these two rule sets, giving a random chance of no player being able to branch out from the form of Block. This chance is greatly lowered in rule set III, as seen by the increased minimum bound.
 
 \subsection{Overall Analysis}
 Through a culmination of all the above finding, our main questions can be answered. The simplest answer to question one is that rule set III gives the most complexity, though this changes when taking into account question two. Participants found rule set III to be the least enjoyable, showing that the rule changes there in answer question two. This leaves rule set II, which strikes the best balance between playability and complexity, answering question one. An example of the complexity is shown in figure \ref{square} below, one of the more interesting patterns to come out of rule set II.
@@ -154,13 +155,13 @@ Through a culmination of all the above finding, our main questions can be answer
     \caption{An odd pattern from rule set II}
     \label{square}
 \end{figure}
-
+\pagebreak
 \section{Conclusion}
 European dominoes, and the games played with them, have withstood the test of time for an extraordinary period for such a simple idea. Though due to this simplicity mathematical research is few and far between, and we set out to change that. With the creation of three variations on tournament rules, we collected data on real games to find an equilibrium of mathematical complexity and strategy. Complexity was compared via equation \ref{eqn2}, with strategy coming from the testimonials of participants. We found that rule set II struck the best balance of these two characteristics, with it being the favourite amongst participants. We hope that these finding can open doors to expand research into dominoes to the fields of tessellation, statistics, and game theory just to name a few.
 
 \section*{Acknowledgements}
 We would like to acknowledge several people if not for whom this research would not have been possible. Our biggest thank you goes to Kaitlin Healey, along with Tiffany Anne and Nicole Regier of the MUN Folklore Society for participation in data collection. Until undertaking this research we were not aware gathering data could be entertaining. The domino set used for data collection was a childhood set graciously donated by Lisa Adey-Rideout, which we appreciate greatly. A thank you also goes to Logan Sacrey, for being our first introduction to the wonders of \LaTeX.
-
+\pagebreak
 \section*{Appendix}
 \appendix
 \section{Data}\label{A}
@@ -178,7 +179,7 @@ In all of the following, a line break separates session one and two.
     \includegraphics[width=0.5\linewidth]{tables/Rules II data.png}
     \label{A2}
 \end{figure}
-
+\pagebreak
 \subsection{Rule Set III}
 \begin{figure}[h!]
     \centering
